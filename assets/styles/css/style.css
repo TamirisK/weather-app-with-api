@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited, a:hover, a:link {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*=============== VARIABLES SCSS ===============*/
+/*========== Colors ==========*/
+/*========== Font ==========*/
+/*========== Typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+/* Responsive typography */
+:root {
+  --off-white: #e5e5e5;
+  --blue-1: #62b8f5;
+  --blue-2: #4475ef;
+  --shadow: rgba(3, 46, 87, 0.2);
+}
+
+body {
+  height: 100vh;
+  background: rgb(90, 90, 248);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(90, 90, 248)), to(rgb(152, 197, 255)));
+  background: linear-gradient(180deg, rgb(90, 90, 248) 0%, rgb(152, 197, 255) 100%);
+  overflow: hidden;
+  font-family: "Nunito", sans-serif;
+}
+
+section.wrapper {
+  width: 90vw;
+  max-width: 40em;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 1.25rem;
+}
+section.wrapper .container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(2em);
+          backdrop-filter: blur(2em);
+  padding: 3.5em 2.5em;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1em;
+  text-align: center;
+  -webkit-box-shadow: 0 0 1em 0.5em rgba(70, 69, 88, 0.1882352941);
+          box-shadow: 0 0 1em 0.5em rgba(70, 69, 88, 0.1882352941);
+}
+section.wrapper .search__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  font-size: 1.25rem;
+}
+section.wrapper .search__container input, section.wrapper .search__container button {
+  outline: none;
+  font-size: 1em;
+  border: none;
+}
+section.wrapper .search__container input {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding: 0.7em;
+  background-color: transparent;
+  border-bottom: 0.1em solid rgb(205, 213, 222);
+  color: #f0f4f9;
+}
+section.wrapper .search__container input::-webkit-input-placeholder {
+  color: rgb(205, 213, 222);
+}
+section.wrapper .search__container input::-moz-placeholder {
+  color: rgb(205, 213, 222);
+}
+section.wrapper .search__container input:-ms-input-placeholder {
+  color: rgb(205, 213, 222);
+}
+section.wrapper .search__container input::-ms-input-placeholder {
+  color: rgb(205, 213, 222);
+}
+section.wrapper .search__container input::placeholder {
+  color: rgb(205, 213, 222);
+}
+section.wrapper .search__container input:focus {
+  border-color: #f0f4f9;
+}
+section.wrapper .search__container button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: 500;
+  color: rgb(90, 90, 248);
+  background-color: #f0f4f9;
+  border-radius: 0.3em;
+}
+
+#result {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+#result h2 {
+  font-size: 1.5rem;
+  color: #f0f4f9;
+  font-weight: 600;
+  margin: 1.5em 0 0.75em 0;
+}
+#result .desc {
+  font-size: 1rem;
+  color: rgb(205, 213, 222);
+  font-weight: 500;
+}
+#result img {
+  margin: 0.25em 0 0.25em 0;
+  width: 4.5em;
+  -webkit-filter: drop-shadow(0 1.8em 3.7em var(--shadow));
+          filter: drop-shadow(0 1.8em 3.7em var(--shadow));
+}
+#result h1 {
+  font-size: 3rem;
+  margin: 0.5em 0 0.75em 0;
+  line-height: 0;
+  color: #f0f4f9;
+}
+
+.temp__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.temp__container .temp {
+  font-weight: 300;
+  color: rgb(205, 213, 222);
+}
+.temp__wrapper {
+  padding: 0.3em 1em;
+}
+.temp__wrapper.min {
+  border-right: 0.1em solid rgba(255, 255, 255, 0.25);
+}
+.temp__wrapper .title {
+  text-transform: lowercase;
+  font-weight: 600;
+  color: #f0f4f9;
+}
+
+.error__msg {
+  padding-top: 2em;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f0f4f9;
+}

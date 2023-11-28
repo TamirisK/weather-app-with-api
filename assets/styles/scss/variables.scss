@@ -1,0 +1,29 @@
+/*=============== VARIABLES SCSS ===============*/
+/*========== Colors ==========*/
+$bg-color: rgb(90,90,248);
+$bg-color-gradient: linear-gradient(180deg, rgba(90,90,248,1) 0%, rgba(152,197,255,1) 100%);
+$light-color: #f0f4f9;
+$light-transparent-1: rgba(255, 255, 255, 0.25);
+$light-transparent-2: rgba(255, 255, 255, 0.1);
+$light-gray: #7b7a8b;
+$dark-light: rgb(205, 213, 222);
+$dark-gray: #46455830;
+
+/*========== Font ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap');
+$primary-font: 'Nunito', sans-serif;
+
+/*========== Typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+$h1-font-size: 3rem;
+$h2-font-size: 1.5rem;
+$h3-font-size: 1.25rem;
+$normal-font-size: 1rem;
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  $h1-font-size: 3.5rem;
+  $h2-font-size: 2rem;
+  $h3-font-size: 1.75rem;
+  $normal-font-size: 1.5rem;
+}
